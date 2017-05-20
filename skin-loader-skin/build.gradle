@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.example.android_skin_laoder_skin"
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+final def TARGET_SKIN_DIR = '../skin-package/'
+def skinName = "BlackFantacy.skin"
+
+gradle.projectsEvaluated {
+    assembleRelease.doLast {
+        println("=====================assembleRelease.doLast.begin.=========================")
+
+        def dir = new File(TARGET_SKIN_DIR)
+        if (!dir.exists()) {
+            dir.mkdirs()
+        }
+
+        def f = new File(TARGET_SKIN_DIR + skinName)
+        if (f.exists()) {
+            f.delete()
+        }
+
+        copy {
+            from('build/outputs/apk')
+            into(TARGET_SKIN_DIR)
+            include '*.apk'
+            exclude '**/*-unaligned.apk'
+            rename ('skin-loader-skin-release.apk', skinName)
+        }
+
+        println("=====================assembleRelease.doLast success.=========================")
+    }
+
+    assembleDebug.doLast {
+        println("=====================assembleDebug.doLast.begin.=========================")
+
+        def dir = new File(TARGET_SKIN_DIR)
+        if (!dir.exists()) {
+            dir.mkdirs()
+        }
+
+        def f = new File(TARGET_SKIN_DIR + skinName)
+        if (f.exists()) {
+            f.delete()
+        }
+
+        copy {
+            from('build/outputs/apk')
+            into(TARGET_SKIN_DIR)
+            include '*.apk'
+            exclude '**/*-unaligned.apk'
+            rename ('skin-loader-skin-debug.apk', skinName)
+        }
+
+        println("=====================assembleDebug.doLast success.=========================")
+    }
+}

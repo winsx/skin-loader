@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SkinManager.iml" filepath="$PROJECT_DIR$/SkinManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-skin-loader/lib-skin-loader.iml" filepath="$PROJECT_DIR$/lib-skin-loader/lib-skin-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skin-loader-sample/skin-loader-sample.iml" filepath="$PROJECT_DIR$/skin-loader-sample/skin-loader-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skin-loader-skin/skin-loader-skin.iml" filepath="$PROJECT_DIR$/skin-loader-skin/skin-loader-skin.iml" />
+    </modules>
+  </component>
+</project>
