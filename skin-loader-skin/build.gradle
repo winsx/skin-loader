@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.example.android_skin_laoder_skin"
+        applicationId "net.gility.android.skingpackage"
         minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
