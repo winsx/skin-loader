@@ -11,10 +11,10 @@
 ## 工程目录介绍
 ```
 Android-Skin-Loader
-├── android-skin-loader-lib      // 皮肤加载库
-├── android-skin-loader-sample   // 皮肤库应用实例
-├── android-skin-loader-skin     // 皮肤包生成demo
-└── skin-package                 // 皮肤包输出目录
+├── lib-skin-loader      // 皮肤加载库
+├── skin-loader-sample   // 皮肤库应用实例
+├── skin-loader-skin     // 皮肤包生成demo
+└── skin-package         // 皮肤包输出目录
 ```
 
 ## 用法
